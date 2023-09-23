@@ -1,0 +1,26 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-text {
+  margin-bottom: 8px;
+}
+
+/* Add more CSS styles as needed for responsiveness */
