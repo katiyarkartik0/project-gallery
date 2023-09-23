@@ -3,9 +3,6 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { authRoutes } = require("./routes/auth");
-// const { taskRoutes } = require("./routes/task");
-const { verifyToken } = require("./middleware/verifyToken");
 const { projectRoutes } = require("./routes/project");
 const routes = express.Router();
 
@@ -20,7 +17,6 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome");
 });
 
-app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
 
 mongoose
