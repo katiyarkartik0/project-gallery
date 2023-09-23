@@ -10,7 +10,6 @@ const Dashboard = () => {
       try {
         const response = await getProjects("accessToken");
         const { project } = await response.json();
-        console.log(project.length);
         setProjects(project);
       } catch (err) {
         console.log(err);
@@ -32,7 +31,6 @@ const Dashboard = () => {
           } = {},
           _id,
         } = item;
-        console.log(item)
         return (
           <Card
             key={_id}
@@ -45,22 +43,6 @@ const Dashboard = () => {
           />
         );
       })}
-      {/* <Card
-        title="Project Title 1"
-        technologies="React, Node.js, MongoDB"
-        frontend="React, HTML, CSS"
-        backend="Node.js, Express"
-        databases="MongoDB"
-        infrastructure="AWS"
-      />
-      <Card
-        title="Project Title 1"
-        technologies="React, Node.js, MongoDB"
-        frontend="React, HTML, CSS"
-        backend="Node.js, Express"
-        databases="MongoDB"
-        infrastructure="AWS"
-      /> */}
     </div>
   );
 };

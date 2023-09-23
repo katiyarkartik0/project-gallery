@@ -5,3 +5,9 @@ export const getProjects = async (accessToken) =>
     method: "GET",
     headers: { authorization: `JWT ${accessToken}` },
   });
+
+export const smartSearch = async ({ accessToken, query }) =>
+  await fetch(`${ENDPOINT}/api/projects/smartSearch?clientQuery=${query}`, {
+    method: "GET",
+    headers: { authorization: `JWT ${accessToken}` },
+  });

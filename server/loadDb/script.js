@@ -21,6 +21,7 @@ mongoose
   })
   .then(async () => {
     console.log("Connected to DB");
+    //optimally loading mongoDB
     for (let k = 0; k < collectionOfJsonData.length; k++) {
       const currJsonData = collectionOfJsonData[0];
       for (let j = 0; j < currJsonData.length; j++) {
