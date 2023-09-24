@@ -4,13 +4,16 @@ import { useEffect, useState } from "react";
 import { getProjects } from "api/projects";
 const Dashboard = () => {
   const [projects, setProjects] = useState([]);
+  const [isLoading,setIsLoading] = useState(false)
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
+        setIsLoading(true)
         const response = await getProjects("accessToken");
         const { project } = await response.json();
         setProjects(project);
+        setIsLoading(false)
       } catch (err) {
         console.log(err);
       }
@@ -20,7 +23,8 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      {projects.map((item) => {
+      {isLoading && "Loading..."}
+      {!isLoading && projects.map((item) => {
         const {
           project: { title = "", technologies = "" } = {},
           technicalSkillSet: {
