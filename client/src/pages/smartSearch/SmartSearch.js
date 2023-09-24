@@ -38,6 +38,7 @@ const SmartSearch = () => {
         { query: smartSearchQuery, smartSearchResponse: queryResponse },
       ]);
       setIsLoading(false);
+      setSmartSearchQuery("")
     } catch (err) {
       console.log(err);
     }
