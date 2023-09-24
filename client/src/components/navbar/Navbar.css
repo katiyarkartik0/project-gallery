@@ -51,6 +51,10 @@
   font-weight: bold;
   transition: background-color 0.3s;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
 }
 
 .smart-search-button:hover {
