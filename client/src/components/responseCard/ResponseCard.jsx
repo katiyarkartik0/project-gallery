@@ -4,7 +4,7 @@ import "./ResponseCard.css"
 const ResponseCard = ({ query, smartSearchResponse }) => {
     return (
         <div className="historyCard">
-            <p>{query}</p>
+            <p className="querySentence">{query}</p>
             <div className="cardsList">
             {smartSearchResponse.map(
                 ({
