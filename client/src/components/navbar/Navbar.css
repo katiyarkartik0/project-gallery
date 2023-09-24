@@ -7,8 +7,8 @@
   border-radius: 8px;
   margin: 5px;
   position: sticky;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: 9999;
 }
 
@@ -16,21 +16,26 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
-
+  display: flex;
+  align-items: start;
+  width: 250px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-link {
   cursor: pointer;
   font-weight: bold;
   transition: color 0.3s;
-  color: #2699FB;
+  color: #2699fb;
   text-decoration: none;
+  margin: 5px;
 }
 
 .nav-link:hover {
@@ -54,8 +59,12 @@
 
 @media (max-width: 768px) {
   /* Add responsive styles for smaller screens */
-  .nav-links {
+  .navbar {
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    justify-content: center;
   }
 }

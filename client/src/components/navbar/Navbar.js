@@ -7,7 +7,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="logo">Project Gallery</div>
-        <ul className="nav-links">
+        <div className="nav-links">
           <NavLink to={"/"} className="nav-link">
             Home
           </NavLink>
@@ -18,7 +18,7 @@ function Navbar() {
           >
             Contact
           </a>
-        </ul>
+        </div>
         <NavLink to={"/smartSearch"} className="smart-search-button">
           Try Smart Search
         </NavLink>
