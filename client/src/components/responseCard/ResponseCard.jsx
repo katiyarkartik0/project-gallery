@@ -1,7 +1,7 @@
 import Card from "components/card/Card";
-import "./HistoryCard.css"
+import "./ResponseCard.css"
 
-const HistoryCard = ({ query, smartSearchResponse }) => {
+const ResponseCard = ({ query, smartSearchResponse }) => {
     return (
         <div className="historyCard">
             <p>{query}</p>
@@ -28,9 +28,9 @@ const HistoryCard = ({ query, smartSearchResponse }) => {
                         />
                     );
                 }
-            ).reverse()}
+            )}
             </div>
         </ div>)
 }
 
-export default HistoryCard
+export default ResponseCard

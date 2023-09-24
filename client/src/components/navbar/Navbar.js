@@ -8,12 +8,12 @@ function Navbar() {
       <nav className="navbar">
         <div className="logo">Project Gallery</div>
         <ul className="nav-links">
-          <li className="nav-link">Home</li>
+          <NavLink to={"/"} className="nav-link">Home</NavLink>
           <li className="nav-link">About</li>
           <li className="nav-link">Services</li>
           <li className="nav-link">Contact</li>
         </ul>
-        <NavLink className="smart-search-button">Try Smart Search</NavLink>
+        <NavLink to={"/smartSearch"} className="smart-search-button">Try Smart Search</NavLink>
       </nav>
       <Outlet />
     </>

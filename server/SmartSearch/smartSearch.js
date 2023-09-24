@@ -1,10 +1,11 @@
 const openAI = require("openai");
 const { Pinecone } = require("@pinecone-database/pinecone");
 const dotenv = require("dotenv");
+const { convertJsonToText } = require("../helpers/jsonToText");
 
 dotenv.config();
 
-const openAiApiKey = process.env.OPEN_AI_API_KEY2;
+const openAiApiKey = process.env.OPEN_AI_API_KEY4;
 const pineconeEnv = process.env.PINECONE_ENVIRONMENT;
 const pineconeApiKey = process.env.PINECONE_API_KEY;
 const pineconeIndexName = process.env.PINECONE_INDEX_NAME;
@@ -34,28 +35,27 @@ const createEmbeddingsForDataChunks = async (dataChunks) => {
     const chunk = dataChunks[i];
     if (requestsMade >= 3) {
       // Exceeded rate limit, wait before making the next request
-      console.log(embeddings);
+      await new Promise((resolve) => setTimeout(resolve, 50000)); // Wait for 50 seconds
+      requestsMade = 0; // Reset request counter
+    }
+    try {
+      const text = convertJsonToText(chunk);
       console.log(
         "_________________________________________________________________________________________________________________________________"
       );
+      console.log(text)
       console.log(embeddings.length);
       console.log(
         "_________________________________________________________________________________________________________________________________"
       );
-      await new Promise((resolve) => setTimeout(resolve, 60000)); // Wait for 60 seconds
-      requestsMade = 0; // Reset request counter
-    }
-    try {
-      const embeddingInformation = await createEmbeddings(
-        JSON.stringify(chunk)
-      );
+      const embeddingInformation = await createEmbeddings(text);
       const embedding = embeddingInformation.data[0].embedding;
       embeddings.push({ dataObj: chunk, embedding });
       requestsMade++; // Increment the request counter
     } catch (err) {
       console.log(err);
       // Retry the request after a delay
-      await new Promise((resolve) => setTimeout(resolve, 60000)); // Wait for 60 seconds
+      await new Promise((resolve) => setTimeout(resolve, 50000)); // Wait for 50 seconds
       i--; // Retry the same input
     }
   }

@@ -30,6 +30,24 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
+.historyBoard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  font-style: italic;
+  font-size: larger;
+  padding: 4px;
+}
+.responseBoard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  font-style: italic;
+  font-size: larger;
+  padding: 4px;
+}
 .placeHolderImg{
     margin: 5px;
     height: 500px;
@@ -57,6 +75,7 @@
     transform: translateX(20vw);
   }
 }
+
 
 @media (max-width: 420px) {
     /* Responsive styles for smaller screens */

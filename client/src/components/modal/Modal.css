@@ -1,0 +1,171 @@
+/* Styling for the container, adjust as needed */
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+/* Styling for the modal background */
+.modal-background {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 19;
+}
+
+/* Styling for the modal */
+.modal {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 591px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+}
+
+/* Styling for the modal Header */
+.modal-header {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px;
+  border-bottom: 1px solid #dadce0;
+}
+
+/* Styling for the modal content */
+.modal-content {
+  box-sizing: border-box;
+  padding: 20px 30px;
+  width: 100%;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+/* Styling for the close button inside the modal */
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Styling for the modal footer */
+
+.modal-footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 30px;
+  border-top: 1px solid #dadce0;
+}
+
+/* Styling for the form inside the modal */
+/* content css */
+.modalHeaderHeading {
+  color: var(--text-100, #1c4980);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.fieldHeading {
+  display: block;
+  color: #1c4980;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.saveBtn {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: #0073e6;
+  border: 0;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-text {
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  margin: 2px;
+}
+.tag-blue{
+    color: #1c4980;
+    background: #ddedff;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+  }
+
+  .modal-header,
+  .modal-content,
+  .modal-footer {
+    padding: 15px;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 15px;
+  }
+
+  .fieldHeading {
+    font-size: 12px;
+  }
+}

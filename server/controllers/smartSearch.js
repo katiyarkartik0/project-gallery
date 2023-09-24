@@ -4,7 +4,7 @@ const Project = require("../models/project");
 const Technology = require("../models/technology");
 const mongoose = require("mongoose");
 
-const smartSearchQuery = async ({ query, defaultNumOfQueries = 3 }) => {
+const smartSearchQuery = async ({ query, defaultNumOfQueries = 4 }) => {
   const queryEmbeddings = await createEmbeddings(query);
   const embedding = queryEmbeddings.data[0].embedding;
 
