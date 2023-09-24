@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const { projectRoutes } = require("./routes/project");
+const { smartSearchRoutes } = require("./routes/smartSearch");
 const routes = express.Router();
 
 dotenv.config();
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/projects", projectRoutes);
+app.use("/api/smartSearch",smartSearchRoutes)
 
 mongoose
   .connect(process.env.MONGO_URL, {

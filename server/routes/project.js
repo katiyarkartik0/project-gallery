@@ -1,7 +1,8 @@
 const express = require("express");
 const projectRoutes = express.Router();
 const bodyParser = require("body-parser");
-const { getProjects, searchProjects } = require("../controllers/project");
+const { getProjects } = require("../controllers/project");
+const { searchProjects } = require("../controllers/smartSearch");
 
 projectRoutes.use(bodyParser.urlencoded({ extended: false }));
 projectRoutes.use(bodyParser.json());

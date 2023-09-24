@@ -30,7 +30,7 @@ const createEmbeddings = async (dataObj) => {
 const createEmbeddingsForDataChunks = async (dataChunks) => {
   const embeddings = [];
   let requestsMade = 0;
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < dataChunks.length; i++) {
     const chunk = dataChunks[i];
     if (requestsMade >= 3) {
       // Exceeded rate limit, wait before making the next request
