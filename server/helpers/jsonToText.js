@@ -8,7 +8,6 @@ const convertJsonToText = (chunk) => {
     let tempText = "";
     const key = keysOfJsonChunk[i];
     if (isKeyEquivalentToAttribute(key, "project")) {
-      // console.log(chunk["project"], "2.");
       const keysOfProject = Object.keys(chunk["project"]);
       for (let j = 0; j < keysOfProject.length; j++) {
         const currKey = keysOfProject[j];

@@ -28,21 +28,15 @@ const createSmartSearchHistory = async ({ query, queryResponse }) => {
     query,
     smartSearchResponse: queryResponse.map(({ _id }) => new ObjectId(_id)),
   });
-  console.log(
-    queryResponse.map(({ _id }) => new ObjectId(_id)),
-    "0000000000000000000000000000000000"
-  );
   return await smartSearchHistory.save();
 };
 
 const searchProjects = async (req, res) => {
   let { clientQuery: query } = req.query;
-  console.log(query);
   if (!query) {
     return res.status(400).json({ msg: "please send a valid query" });
   }
   query = query.replace("+", " ");
-  console.log(query);
 
   try {
     const queryResponse = await smartSearchQuery({ query });
