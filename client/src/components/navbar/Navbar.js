@@ -8,12 +8,20 @@ function Navbar() {
       <nav className="navbar">
         <div className="logo">Project Gallery</div>
         <ul className="nav-links">
-          <NavLink to={"/"} className="nav-link">Home</NavLink>
-          <li className="nav-link">About</li>
-          <li className="nav-link">Services</li>
-          <li className="nav-link">Contact</li>
+          <NavLink to={"/"} className="nav-link">
+            Home
+          </NavLink>
+          <a
+            className="nav-link"
+            target="_blank"
+            href={"https://kartikkatiyarportfolio.netlify.app/"}
+          >
+            Contact
+          </a>
         </ul>
-        <NavLink to={"/smartSearch"} className="smart-search-button">Try Smart Search</NavLink>
+        <NavLink to={"/smartSearch"} className="smart-search-button">
+          Try Smart Search
+        </NavLink>
       </nav>
       <Outlet />
     </>

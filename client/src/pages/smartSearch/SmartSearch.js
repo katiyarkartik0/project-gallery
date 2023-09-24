@@ -56,7 +56,9 @@ const SmartSearch = () => {
           Smart Search
         </button>
       </form>
-      <div className="responseBoard"><p>Smart Response!</p></div>
+      <div className="responseBoard">
+        <p>Smart Response! {isLoading && "Loading..."}</p>
+      </div>
       {smartSearchResponses.length > 0 &&
         smartSearchResponses.map(({ query, smartSearchResponse }) => {
           return (
@@ -69,7 +71,9 @@ const SmartSearch = () => {
           );
         })}
       <img src={vikramLander} className="placeHolderImg"></img>
-      <div className="historyBoard"><p>History has been crafted here!</p></div>
+      <div className="historyBoard">
+        <p>History has been crafted here! {isLoading && "Loading..."}</p>
+      </div>
       {smartSearchHistory.map(({ query, smartSearchResponse }) => {
         return (
           <>
