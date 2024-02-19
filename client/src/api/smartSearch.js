@@ -1,4 +1,4 @@
-import { ENDPOINT } from "helpers/constants";
+import ENDPOINT from "helpers/constants";
 
 export const smartSearch = async ({ accessToken, query }) =>
   await fetch(`${ENDPOINT}/api/smartSearch/search?clientQuery=${query}`, {
