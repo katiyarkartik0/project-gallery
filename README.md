@@ -24,6 +24,6 @@ This repository contains code for an end-to-end application that displays inform
 - Free to use any open-source software/library/LLMs such as ChatGPT. Please attribute it as a reference in the final report.
 
 ## Result
-[live hosted project](https://projectgallerykartik.netlify.app/)
-[Loom Video Link Explanation](https://www.loom.com/share/a60fbc608e174af0bbd9a0ebf5d46046?sid=add4f2dc-6bbf-454f-aa72-21ffbcc1379c)
+- [live hosted project](https://projectgallerykartik.netlify.app/)
+- [Loom Video Link Explanation](https://www.loom.com/share/a60fbc608e174af0bbd9a0ebf5d46046?sid=add4f2dc-6bbf-454f-aa72-21ffbcc1379c)
 
